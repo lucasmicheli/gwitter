@@ -7,39 +7,39 @@
     <main>
         <div class="user-container">
             <div id="user-logo">
-                <img src="" alt="">
+                <img src="" alt="" />
             </div>
             <div class="user-info">
                 <div>
-                    <h2 id="user-name">{{tweet.user.name}} </h2>
+                    <h2 id="user-name">{{ tweet.user.name }}</h2>
                 </div>
                 <div>
-                    <h2 id="user-account">@{{tweet.user.screen_name}}</h2>
+                    <h2 id="user-account">{{ tweet.user.screen_name | screenUser }}</h2>
                 </div>
-
             </div>
         </div>
         <div class="tweet-container">
             <div class="tweet-text">
-                <p>{{tweet.text}}</p>
+                <p>{{ tweet.text }}</p>
             </div>
 
-            <div class="tweet-img"><img src="" alt="Tweet picture"></div>
+            <div class="tweet-img"><img src="" alt="Tweet picture" /></div>
 
             <div class="tweet-date">
-                <p>{{tweet.created_at | date:'h:mm'}} p.m. - {{tweet.created_at | date:'d LLL. yy' | lowercase}}</p>
+                <p>
+                    {{ tweet.created_at | date: "h:mm" }} p.m. - {{ tweet.created_at | date: "d LLL. yy" | lowercase }}
+                </p>
             </div>
         </div>
 
-        <hr>
+        <hr />
 
         <div class="tweet-details">
-            <div class="interaction">{{tweet.retweet_count}} Retweets</div>
-            <div class="interaction">{{tweet.favorite_count}} Like</div>
+            <div class="interaction">{{ tweet.retweet_count }} Retweets</div>
+            <div class="interaction">{{ tweet.favorite_count }} Like</div>
         </div>
 
-        <hr>
-
+        <hr />
     </main>
 
     <footer>
@@ -47,5 +47,4 @@
         <div>Retweet</div>
         <div>Comments</div>
     </footer>
-
 </div>

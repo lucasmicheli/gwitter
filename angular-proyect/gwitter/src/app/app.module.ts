@@ -12,9 +12,10 @@ import { TwitterAPIService } from "./service/twitter-api.service";
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { TweetDetailsComponent } from './tweet-details/tweet-details.component';
+import { ScreenUserPipe } from './pipe/screen-user.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PageNotFoundComponent, TweetDetailsComponent],
+  declarations: [AppComponent, HomeComponent, PageNotFoundComponent, TweetDetailsComponent, ScreenUserPipe],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [TwitterAPIService],
   bootstrap: [AppComponent]
