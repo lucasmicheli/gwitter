@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit {
   constructor(private twitterService: TwitterAPIService) {}
 
   ngOnInit(): void {
-    //this.getRecentTweets();
-    this.getArgentinaTrends();
+    this.getRecentTweets();
+    //this.getArgentinaTrends();
   }
 
   getRecentTweets() {

@@ -1,9 +1,11 @@
-<!-- <div *ngFor="let tweet of tweets">
-    {{ tweet.text }}
-</div> -->
+<h1>Home</h1>
 
-<div *ngFor="let data of trend | slice:0:5">
+<div *ngFor="let tweet of tweets" [routerLink]="['/show', tweet.id_str]">
+    {{ tweet.text }}
+</div>
+
+<!-- <div *ngFor="let data of trend | slice:0:5">
     {{ data.name }} {{ data.tweet_volume }}
     <br />
     <br />
-</div>
+</div> -->
