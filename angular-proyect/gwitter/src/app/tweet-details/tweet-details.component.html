@@ -1,0 +1,7 @@
+<div *ngIf="tweet; else errorLoading">
+    Tweet {{tweet.id}}{{tweet.text}}
+</div>
+
+<ng-template #errorLoading>
+    Error loading page!
+</ng-template>
