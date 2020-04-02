@@ -46,4 +46,8 @@ export class TwitterAPIService {
       })
     );
   }
+
+  getSearchTweets (searchQuery: string): Observable<Tweet> {
+    return this.http.get<Tweet>(this.urlSearchTweets+searchQuery)
+  };
 }
