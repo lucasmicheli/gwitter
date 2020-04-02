@@ -1,0 +1,13 @@
+.trends-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trend-item{
+    border-bottom: 1px solid gray;
+}
+
+@media (max-width: 720px) { 
+
+}

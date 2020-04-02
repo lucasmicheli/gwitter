@@ -1,0 +1,28 @@
+<section class="search-container">
+    
+    <div class="search-bar">
+        <fa-icon [icon]="faSearch" class="search-icon" size="2x" ></fa-icon>
+        <input type="text" placeholder="Search gwitter" class="search-input" [(ngModel)]="searchQuery" >
+    </div>
+    <button class="btn btn-primary" (click)="getResults()">Search</button>
+
+</section>
+
+<section class="list-tweets" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll()">
+    <app-tweet> <!-- meter "tweets" ¿hace falta algún parámetro? --> </app-tweet>
+    <div *ngIf="chargedAllTweets">
+        <p>Sorry, there are no more tweets</p>
+    </div>
+</section>
+
+<div class="load-spinner">
+    <ngx-spinner
+        size="medium"
+        color="grey"
+        type="line-spin-fade"
+        bdColor="inherit"
+        [fullScreen]="false"
+    ></ngx-spinner>
+</div>
+
+<app-trends></app-trends>
