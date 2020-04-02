@@ -5,6 +5,11 @@ export class Tweet {
   id: number;
   id_str: string;
   text: string;
+  entities: {
+    media: {
+      media_url: string;
+    };
+  };
   user: User;
   retweet_count: number;
   favorite_count: number;

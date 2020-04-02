@@ -27,6 +27,12 @@ export class TwitterAPIService {
     return this.http.get<Tweet>(url);
   }
 
+  getSearchingTweets(search: string): Observable<any> {
+    const url = `${this.urlSearchTweets}${search}`;
+    console.log(url);
+    return this.http.get<Tweet[]>(url);
+  }
+
   getArgentinaTrends(): Observable<TrendDetail> {
     return this.http.get<Trend>(this.urlArgentinaTrends).pipe(
       map(data => {

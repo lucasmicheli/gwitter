@@ -10,8 +10,11 @@ import { NgxSpinnerService } from "ngx-spinner";
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  
+  tweets: any;
+  result: string = "messi";
+  
   faSearch = faSearch;
-  tweets : Tweet[];
   searchQuery : string;
   initTweets : number = 20;
   index : number = 1;
@@ -26,10 +29,23 @@ export class SearchComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(this.result);
+    this.getSearchingTweets();
   }
 
-  getResults():void {
-    
+  getSearchInput(input: string) {
+    this.result = input;
+  }
+
+  getSearchingTweets() {
+    return this.twitterService
+      .getSearchingTweets(this.result)
+      .subscribe(tweets => {
+        this.tweets = tweets.statuses;
+        console.log(this.tweets);
+      });
+
+  getResults():void {    
     /* Avoid an empty search */
     if(this.searchQuery === ' '){
       this.searchQuery = '';
@@ -69,5 +85,4 @@ export class SearchComponent implements OnInit {
       this.noScroll = true;
       this.spinner.hide(); /* Hide spinner */
     });
-  }
-}
+

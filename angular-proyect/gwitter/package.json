@@ -1,4 +1,3 @@
-{
   "name": "gwitter",
   "version": "0.0.0",
   "scripts": {
@@ -53,4 +52,3 @@
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
   }
-}
