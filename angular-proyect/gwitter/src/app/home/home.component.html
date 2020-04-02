@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <h1>Home</h1>
 
 <div *ngFor="let tweet of tweets" [routerLink]="['/show', tweet.id_str]">
