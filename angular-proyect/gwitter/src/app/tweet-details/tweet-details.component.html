@@ -1,13 +1,13 @@
 <div class="container" *ngIf="tweet">
     <header>
-        <div>--</div>
+        <div [routerLink]="['/home']">--</div>
         <h1>Tweet</h1>
     </header>
 
     <main>
         <div class="user-container">
             <div id="user-logo">
-                <img src="" alt="" />
+                <img src="{{ tweet.user.profile_image_url }}" />
             </div>
             <div class="user-info">
                 <div>
@@ -23,7 +23,9 @@
                 <p>{{ tweet.text }}</p>
             </div>
 
-            <div class="tweet-img"><img src="" alt="Tweet picture" /></div>
+            <div class="tweet-img" *ngIf="tweet.entities.media">
+                <img src="{{ tweet.entities.media[0].media_url }}" alt="Tweet picture not found" />
+            </div>
 
             <div class="tweet-date">
                 <p>

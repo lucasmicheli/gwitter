@@ -1,4 +1,7 @@
 @media screen and (max-width: 720px) {
+    app-header {
+        display: none;
+    }
     h2 {
         font-size: 2rem;
     }
@@ -31,7 +34,7 @@
         margin-left: 5%;
         width: 80%;
     }
-    #user-logo {
+    #user-logo img {
         background-color: grey;
         border-radius: 50%;
         width: 100px;
@@ -87,6 +90,99 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
-        margin-top: 7%;
+        margin-top: 2%;
     }
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    border-bottom: 5px solid #c7c7c7;
+    width: 90%;
+    padding: 1%;
+}
+
+header div {
+    margin-right: 5%;
+    align-self: center;
+}
+
+main {
+    width: 90%;
+}
+
+.user-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 3%;
+}
+
+#user-logo img {
+    background-color: grey;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    margin-right: 10%;
+}
+
+.user-info {
+    margin-left: 10%;
+}
+
+#user-account {
+    opacity: 0.5;
+}
+
+.tweet-text {
+    font-size: 2.5rem;
+    text-align: justify;
+    margin-bottom: 2%;
+}
+
+.tweet-img {
+    border: 1px solid;
+    max-height: 25%;
+    min-height: 10%;
+    padding: 25%;
+    margin-bottom: 2%;
+}
+
+.tweet-date {
+    font-size: 2em;
+    opacity: 0.5;
+    margin-bottom: 2%;
+}
+
+.tweet-details {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.interaction {
+    margin-right: 10%;
+    padding: 3%;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+    padding: 5%;
 }
