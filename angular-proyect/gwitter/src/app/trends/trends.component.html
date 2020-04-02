@@ -1,13 +1,15 @@
-<!-- Agregar nueva versión -->
+<h2 class="trends-title">Trends for you</h2>
 
-<div class="trends-list" *ngFor="let trend of trends">
-    <a href=""></a>
-    <div (click)="" class="trend-item">
-        <h3>
-            #{{ trends.name }}
-        </h3>
-        <p>
-            {{trends.tweet_volume}}
-        </p>
-    </div>
-</div>
+<ol class="trends-list">
+    <li *ngFor="let trend of trends" class="trend-item">
+        <div class="trend-id">{{trends.id}}</div>
+        <div class="trend-info">
+            <h3 class="trend-name">
+                #{{ trends.name }}
+            </h3>
+            <p class="trend-volume">
+                {{trends.tweet_volume}}
+            </p>
+        </div>
+    </li>
+</ol>

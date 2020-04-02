@@ -1,13 +1,48 @@
+.trends-title{
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
 .trends-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: auto;
 }
 
 .trend-item{
-    border-bottom: 1px solid gray;
+    position: relative;
+    border: 1px 0 solid;
+    border-color: lightgray;
+    height: 2.5rem;
+    list-style-type: none;
+    padding: 1rem;
 }
 
-@media (max-width: 720px) { 
+.trend-item:hover{
+    cursor: pointer;
+    border: 1px 0 solid;
+    border-color: black;
+    background-color: lightgray;
+}
 
+.trend-id{ 
+    font-size: 1rem;
+    color: lightgray;
+    width: 3rem;
+    height:inherit;
+    line-height: 3rem;
+    float: left;
+}
+
+.trend-info{    
+    float: left;
+}
+
+.trend-name{
+    color: black;
+    font-size: 1rem;
+    margin-bottom: .6rem;
+}
+
+.trend-volume{
+    font-size: .75rem;
+    color: lightgray;
 }
