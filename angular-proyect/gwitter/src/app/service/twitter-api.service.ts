@@ -5,6 +5,7 @@ import { Trend } from "../model/trend.model";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { TrendDetail } from "../model/trend-detail.model";
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: "root"
@@ -19,6 +20,7 @@ export class TwitterAPIService {
 
   getRecentTweets() {
     return this.http.get<Tweet[]>(this.urlRecentTweets);
+    delay(1500)
   }
 
   getOneTweet(id: string): Observable<Tweet> {

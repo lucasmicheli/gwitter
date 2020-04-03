@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-body">
+        
+        <div class="left" > 
+            <img class="rounded-circle" [src]="item.user.profile_image_url">
+        </div>
+        <div class="right">
+            <h6 class="mb-3">{{item.user.name}} {{item.user.screen_name | screenUser}}</h6>
+            <p>{{item.text}}</p> 
+
+            <div class="d-flex justify-content-between mt-3" >
+            
+            <span><i class="far fa-heart"></i> {{item.favorite_count}}</span>
+            <span><i class="fas fa-sync"></i> {{item.retweet_count}}</span>
+            <span><i class="far fa-comment"></i> </span>
+
+            </div>
+        </div>    
+    </div>    
+</div>        
+
+
+
+
+
