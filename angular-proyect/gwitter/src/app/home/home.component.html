@@ -1,10 +1,26 @@
-<app-header></app-header>
+<div class="card" [routerLink]="['/show', item.id_str]">
+    <div class="card-body">
+        <div class="left">
+            <img class="rounded-circle" [src]="item.user.profile_image_url" />
+        </div>
+        <div class="right">
+            <h6 class="mb-3">
+                {{ item.user.name }} {{ item.user.screen_name | screenUser }}
+            </h6>
+            <p>{{ item.text }}</p>
 
-<h1>Home</h1>
-
-<div *ngFor="let tweet of tweets" [routerLink]="['/show', tweet.id_str]">
-    {{ tweet.text }}
+            <div class="d-flex justify-content-between mt-3">
+                <span><i class="far fa-heart"></i> {{ item.favorite_count }}</span>
+                <span><i class="fas fa-sync"></i> {{ item.retweet_count }}</span>
+                <span><i class="far fa-comment"></i> </span>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- <div *ngFor="let tweet of tweets" [routerLink]="['/show', tweet.id_str]">
+    {{ tweet.text }}
+</div> -->
 
 <!-- <div *ngFor="let data of trend | slice:0:5">
     {{ data.name }} {{ data.tweet_volume }}

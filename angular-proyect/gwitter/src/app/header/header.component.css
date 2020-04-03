@@ -1,4 +1,88 @@
-* {
-    border-bottom: 1px solid;
-    padding: 15%;
+@media screen and (max-width: 720px) {
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 5%;
+        padding-bottom: 0;
+    }
+    h1 {
+        padding: 5%;
+        font-size: 2.5em;
+    }
+    .navigation {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 15%;
+    }
+    i {
+        font-size: 4rem;
+        opacity: 0.6;
+    }
+    nav i:active {
+        border-bottom: 4px solid #4287f5;
+        position: fixed;
+        cursor: pointer;
+    }
+    hr {
+        border: 3px solid grey;
+        opacity: 0.2;
+    }
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+h1 {
+    padding: 5%;
+    font-size: 2.5em;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+i {
+    font-size: 4rem;
+    opacity: 0.6;
+}
+
+.home-section,
+.search-section,
+.config-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 33%;
+}
+
+.home,
+.search,
+.config {
+    border-bottom: 4px solid #4287f5;
+    width: 110%;
+    margin-top: 2rem;
+    visibility: hidden;
+}
+
+nav i:hover {
+    border-bottom: 4px solid #4287f5;
+    position: fixed;
+    cursor: pointer;
+}
+
+hr {
+    border: 3px solid grey;
+    opacity: 0.2;
 }

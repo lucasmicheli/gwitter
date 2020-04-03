@@ -1,6 +1,8 @@
 <div class="container" *ngIf="tweet">
     <header>
-        <div [routerLink]="['/home']">--</div>
+        <div [routerLink]="['/home']">
+            <i id="return-icon" class="fas fa-arrow-left"></i>
+        </div>
         <h1>Tweet</h1>
     </header>
 
@@ -29,7 +31,7 @@
 
             <div class="tweet-date">
                 <p>
-                    {{ tweet.created_at | date: "h:mm" }} p.m. - {{ tweet.created_at | date: "d LLL. yy" | lowercase }}
+                    {{ tweet.created_at | date: "h:mm" }} - {{ tweet.created_at | date: "d LLL. yy" | lowercase }}
                 </p>
             </div>
         </div>
@@ -37,16 +39,20 @@
         <hr />
 
         <div class="tweet-details">
-            <div class="interaction">{{ tweet.retweet_count }} Retweets</div>
-            <div class="interaction">{{ tweet.favorite_count }} Like</div>
+            <div class="interaction">
+                {{ tweet.retweet_count }} <span>Retweets</span>
+            </div>
+            <div class="interaction">
+                {{ tweet.favorite_count }} <span>Likes</span>
+            </div>
         </div>
 
         <hr />
     </main>
 
     <footer>
-        <div>Heart</div>
-        <div>Retweet</div>
-        <div>Comments</div>
+        <div><i id="like-icon" class="far fa-heart"></i></div>
+        <div><i id="retweet-icon" class="fas fa-retweet"></i></div>
+        <div><i id="comment-icon" class="far fa-comment"></i></div>
     </footer>
 </div>

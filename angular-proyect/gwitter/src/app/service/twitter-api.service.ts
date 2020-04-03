@@ -5,6 +5,7 @@ import { Trend } from "../model/trend.model";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { TrendDetail } from "../model/trend-detail.model";
+import { Configuration } from "../model/configuration.model";
 
 @Injectable({
   providedIn: "root"
@@ -14,6 +15,8 @@ export class TwitterAPIService {
   urlArgentinaTrends = "http://localhost:8080/trends?id=23424747";
   urlSearchTweets = "http://localhost:8080/search?q=";
   urlShowTweet = "http://localhost:8080/show?id=";
+
+  accountConfiguration: Configuration;
 
   constructor(private http: HttpClient) {}
 

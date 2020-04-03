@@ -1,5 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { NgxSpinnerModule } from "ngx-spinner";
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
 
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
@@ -15,6 +18,9 @@ import { TweetDetailsComponent } from "./tweet-details/tweet-details.component";
 import { ScreenUserPipe } from "./pipe/screen-user.pipe";
 import { HeaderComponent } from "./header/header.component";
 import { SearchComponent } from "./search/search.component";
+import { TrendsComponent } from "./trends/trends.component";
+import { ConfigurationComponent } from "./configuration/configuration.component";
+import { HomeListComponent } from "./home-list/home-list.component";
 
 @NgModule({
   declarations: [
@@ -24,9 +30,19 @@ import { SearchComponent } from "./search/search.component";
     TweetDetailsComponent,
     ScreenUserPipe,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    TrendsComponent,
+    ConfigurationComponent,
+    HomeListComponent
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    NgxSpinnerModule,
+    InfiniteScrollModule
+  ],
   providers: [TwitterAPIService],
   bootstrap: [AppComponent]
 })

@@ -3,4 +3,7 @@ export class User {
   name: string;
   screen_name: string;
   profile_image_url: string;
+  verified: boolean;
+  default_profile: boolean;
+  following: boolean;
 }

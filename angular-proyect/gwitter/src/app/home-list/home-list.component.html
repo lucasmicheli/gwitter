@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="search-results" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll()">
+        <app-home *ngFor="let tweet of tweetList" [item]="tweet"> </app-home>
+    </div>
+</div>
+
+<div class="row pb-5">
+    <div class="col-md-12 p-5">
+        <ngx-spinner bdColor="" size="default" color="#581f87" type="line-spin-clockwise-fade" [fullScreen]="false">
+        </ngx-spinner>
+    </div>
+</div>
