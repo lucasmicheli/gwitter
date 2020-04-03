@@ -2,6 +2,10 @@
     app-header {
         display: none;
     }
+    #return-icon {
+        font-size: 1.5rem;
+        color: #4287f5;
+    }
     h2 {
         font-size: 2rem;
     }
@@ -11,7 +15,7 @@
         align-items: center;
         margin: 5% auto;
         padding-bottom: 5%;
-        margin-bottom: 0;
+        margin-bottom: 2%;
         border-bottom: 5px solid #c7c7c7;
     }
     header div {
@@ -58,12 +62,10 @@
         margin-bottom: 3%;
     }
     .tweet-img {
-        border: 1px solid;
-        padding: 25%;
-        height: 25%;
-        min-height: 10%;
-        max-height: 25%;
         margin-bottom: 3%;
+    }
+    .tweet-img img {
+        height: 25%;
     }
     .tweet-date {
         font-size: 1.2rem;
@@ -89,8 +91,29 @@
     footer {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        align-items: center;
         margin-top: 2%;
+    }
+    #like-icon,
+    #retweet-icon,
+    #comment-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 2rem;
+        box-shadow: 3px 3px 5px grey;
+    }
+    #like-icon {
+        background-color: #f53b9b;
+        border-radius: 50%;
+    }
+    #retweet-icon {
+        background-color: #2f9e42;
+        border-radius: 50%;
+    }
+    #comment-icon {
+        background-color: #10b0e6;
+        border-radius: 50%;
     }
 }
 
@@ -100,6 +123,11 @@
     align-items: center;
 }
 
+#return-icon {
+    font-size: 1.5rem;
+    color: #4287f5;
+}
+
 header {
     display: flex;
     flex-flow: row wrap;
@@ -107,6 +135,7 @@ header {
     border-bottom: 5px solid #c7c7c7;
     width: 90%;
     padding: 1%;
+    padding-bottom: 2em;
 }
 
 header div {
@@ -149,29 +178,36 @@ main {
 }
 
 .tweet-img {
-    border: 1px solid;
-    max-height: 25%;
-    min-height: 10%;
-    padding: 25%;
     margin-bottom: 2%;
+}
+
+.tweet-img img {
+    height: 25%;
+    width: 50%;
+    margin-left: 25%;
 }
 
 .tweet-date {
     font-size: 2em;
     opacity: 0.5;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
+    margin-top: 10%;
 }
 
 .tweet-details {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
-    margin-left: 5%;
+    width: 90%;
+    font-size: 1.5rem;
 }
 
 .interaction {
     margin-right: 10%;
     padding: 3%;
+}
+
+.interaction span {
+    margin-left: 0.7em;
 }
 
 hr {
@@ -182,7 +218,31 @@ footer {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-evenly;
-    width: 75%;
+    justify-content: space-between;
+    width: 80%;
     padding: 5%;
+}
+
+#like-icon,
+#retweet-icon,
+#comment-icon {
+    font-size: 2rem;
+    color: white;
+    padding: 2rem;
+    box-shadow: 3px 3px 5px grey;
+}
+
+#like-icon {
+    background-color: #f53b9b;
+    border-radius: 50%;
+}
+
+#retweet-icon {
+    background-color: #2f9e42;
+    border-radius: 50%;
+}
+
+#comment-icon {
+    background-color: #10b0e6;
+    border-radius: 50%;
 }

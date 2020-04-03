@@ -5,6 +5,7 @@ export class Tweet {
   id: number;
   id_str: string;
   text: string;
+  truncated: string;
   entities: {
     media: {
       media_url: string;

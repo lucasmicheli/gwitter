@@ -1,48 +1,85 @@
-.trends-title{
-    font-size: 1rem;
-    margin-left: 0.5rem;
+@media screen and (max-width: 720px) {
+    .trends-title {
+        font-size: 2rem;
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+    .trends-list {
+        margin: 3% auto;
+    }
+    .trend-item {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 3%;
+        border-top: 1px solid #dbdbdb;
+    }
+    .trend-info {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        margin-left: 20%;
+    }
+    .trend-id {
+        font-size: 2rem;
+        color: lightgray;
+        width: 3rem;
+        height: inherit;
+        line-height: 3rem;
+        float: left;
+    }
+    .trend-name {
+        font-size: 1.5rem;
+        margin-bottom: 0.5em;
+    }
+    .trend-volume {
+        font-size: 1rem;
+        color: lightgray;
+        align-self: flex-start;
+    }
 }
 
-.trends-list{
-    margin: auto;
+.trends-title {
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
 }
 
-.trend-item{
-    position: relative;
-    border: 1px 0 solid;
-    border-color: lightgray;
-    height: 2.5rem;
+.trends-list {
+    margin: 3% auto;
+}
+
+.trend-item {
     list-style-type: none;
-    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 3%;
+    border-top: 1px solid #dbdbdb;
 }
 
-.trend-item:hover{
-    cursor: pointer;
-    border: 1px 0 solid;
-    border-color: black;
-    background-color: lightgray;
+.trend-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-left: 20%;
 }
 
-.trend-id{ 
-    font-size: 1rem;
+.trend-id {
+    font-size: 2rem;
     color: lightgray;
     width: 3rem;
-    height:inherit;
+    height: inherit;
     line-height: 3rem;
     float: left;
 }
 
-.trend-info{    
-    float: left;
+.trend-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
 }
 
-.trend-name{
-    color: black;
+.trend-volume {
     font-size: 1rem;
-    margin-bottom: .6rem;
-}
-
-.trend-volume{
-    font-size: .75rem;
     color: lightgray;
+    align-self: flex-start;
 }
