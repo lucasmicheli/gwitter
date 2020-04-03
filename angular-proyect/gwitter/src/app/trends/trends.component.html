@@ -1,0 +1,11 @@
+<h2 class="trends-title">Trends for you</h2>
+
+<ol class="trends-list">
+    <li *ngFor="let trend of trends | slice: 0:5; index as i" class="trend-item">
+        <h2 class="trend-id">{{ i + 1 }}</h2>
+        <div class="trend-info">
+            <h3 class="trend-name">#{{ trend.name }}</h3>
+            <p class="trend-volume">{{ trend.tweet_volume }} Tweets</p>
+        </div>
+    </li>
+</ol>

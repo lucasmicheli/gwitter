@@ -1,0 +1,248 @@
+@media screen and (max-width: 720px) {
+    app-header {
+        display: none;
+    }
+    #return-icon {
+        font-size: 1.5rem;
+        color: #4287f5;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin: 5% auto;
+        padding-bottom: 5%;
+        margin-bottom: 2%;
+        border-bottom: 5px solid #c7c7c7;
+    }
+    header div {
+        margin: auto 5%;
+    }
+    header h1 {
+        margin: auto 5%;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .user-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-self: flex-start;
+        margin-left: 5%;
+        width: 80%;
+    }
+    #user-logo img {
+        background-color: grey;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        align-self: center;
+    }
+    .user-info {
+        flex-direction: column;
+        padding: 6%;
+    }
+    #user-account {
+        opacity: 0.3;
+    }
+    .tweet-container {
+        width: 85%;
+        align-self: center;
+    }
+    .tweet-text {
+        font-size: 2rem;
+        text-align: justify;
+        margin-bottom: 3%;
+    }
+    .tweet-img {
+        margin-bottom: 3%;
+    }
+    .tweet-img img {
+        height: 25%;
+    }
+    .tweet-date {
+        font-size: 1.2rem;
+        opacity: 0.5;
+        margin-bottom: 5%;
+    }
+    .tweet-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 80%;
+        font-size: 1.2rem;
+        opacity: 0.8;
+        padding: 3%;
+    }
+    .interaction {
+        margin-right: 10%;
+    }
+    hr {
+        width: 90%;
+        opacity: 0.8;
+    }
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2%;
+    }
+    #like-icon,
+    #retweet-icon,
+    #comment-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 2rem;
+        box-shadow: 3px 3px 5px grey;
+    }
+    #like-icon {
+        background-color: #f53b9b;
+        border-radius: 50%;
+    }
+    #retweet-icon {
+        background-color: #2f9e42;
+        border-radius: 50%;
+    }
+    #comment-icon {
+        background-color: #10b0e6;
+        border-radius: 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#return-icon {
+    font-size: 1.5rem;
+    color: #4287f5;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    border-bottom: 5px solid #c7c7c7;
+    width: 90%;
+    padding: 1%;
+    padding-bottom: 2em;
+}
+
+header div {
+    margin-right: 5%;
+    align-self: center;
+}
+
+main {
+    width: 90%;
+}
+
+.user-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 3%;
+}
+
+#user-logo img {
+    background-color: grey;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    margin-right: 10%;
+}
+
+.user-info {
+    margin-left: 10%;
+}
+
+#user-account {
+    opacity: 0.5;
+}
+
+.tweet-text {
+    font-size: 2.5rem;
+    text-align: justify;
+    margin-bottom: 2%;
+}
+
+.tweet-img {
+    margin-bottom: 2%;
+}
+
+.tweet-img img {
+    height: 25%;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.tweet-date {
+    font-size: 2em;
+    opacity: 0.5;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+.tweet-details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+.interaction {
+    margin-right: 10%;
+    padding: 3%;
+}
+
+.interaction span {
+    margin-left: 0.7em;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 5%;
+}
+
+#like-icon,
+#retweet-icon,
+#comment-icon {
+    font-size: 2rem;
+    color: white;
+    padding: 2rem;
+    box-shadow: 3px 3px 5px grey;
+}
+
+#like-icon {
+    background-color: #f53b9b;
+    border-radius: 50%;
+}
+
+#retweet-icon {
+    background-color: #2f9e42;
+    border-radius: 50%;
+}
+
+#comment-icon {
+    background-color: #10b0e6;
+    border-radius: 50%;
+}

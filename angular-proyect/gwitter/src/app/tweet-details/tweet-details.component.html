@@ -1,0 +1,58 @@
+<div class="container" *ngIf="tweet">
+    <header>
+        <div [routerLink]="['/home']">
+            <i id="return-icon" class="fas fa-arrow-left"></i>
+        </div>
+        <h1>Tweet</h1>
+    </header>
+
+    <main>
+        <div class="user-container">
+            <div id="user-logo">
+                <img src="{{ tweet.user.profile_image_url }}" />
+            </div>
+            <div class="user-info">
+                <div>
+                    <h2 id="user-name">{{ tweet.user.name }}</h2>
+                </div>
+                <div>
+                    <h2 id="user-account">{{ tweet.user.screen_name | screenUser }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="tweet-container">
+            <div class="tweet-text">
+                <p>{{ tweet.text }}</p>
+            </div>
+
+            <div class="tweet-img" *ngIf="tweet.entities.media">
+                <img src="{{ tweet.entities.media[0].media_url }}" alt="Tweet picture not found" />
+            </div>
+
+            <div class="tweet-date">
+                <p>
+                    {{ tweet.created_at | date: "h:mm" }} - {{ tweet.created_at | date: "d LLL. yy" | lowercase }}
+                </p>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="tweet-details">
+            <div class="interaction">
+                {{ tweet.retweet_count }} <span>Retweets</span>
+            </div>
+            <div class="interaction">
+                {{ tweet.favorite_count }} <span>Likes</span>
+            </div>
+        </div>
+
+        <hr />
+    </main>
+
+    <footer>
+        <div><i id="like-icon" class="far fa-heart"></i></div>
+        <div><i id="retweet-icon" class="fas fa-retweet"></i></div>
+        <div><i id="comment-icon" class="far fa-comment"></i></div>
+    </footer>
+</div>

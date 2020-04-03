@@ -1,0 +1,76 @@
+<app-header></app-header>
+
+<section class="search-container">
+    <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-input" [(ngModel)]="result" />
+    </div>
+    <button (click)="getSearchingTweets()">Search</button>
+</section>
+
+<!-- <section class="search-container">
+    <div class="search-bar">
+        <fa-icon class="search-icon" size="2x"></fa-icon>
+        <input type="text" placeholder="Search gwitter" class="search-input" [(ngModel)]="searchQuery" />
+    </div>
+    <button class="btn btn-primary" (click)="getResults()">Search</button>
+</section>
+
+<section class="list-tweets" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll()">
+    <app-tweet>
+         meter "tweets" ¿hace falta algún parámetro? -->
+<!-- </app-tweet>
+    <div *ngIf="chargedAllTweets">
+        <p>Sorry, there are no more tweets</p>
+    </div>
+</section>
+
+<div class="load-spinner">
+    <ngx-spinner size="medium" color="grey" type="line-spin-fade" bdColor="inherit" [fullScreen]="false"></ngx-spinner>
+</div> -->
+
+<div *ngIf="searched; else searchingBlock">
+    <app-trends></app-trends>
+</div>
+
+<ng-template #searchingBlock>
+    <div *ngFor="let tweet of tweets">
+        <div class="tweet-container">
+            <div class="user-info">
+                <div class="user-logo">
+                    <img src="{{ tweet.user.profile_image_url }}" />
+                </div>
+                <div class="user-data">
+                    <div class="user-name">
+                        {{ tweet.user.name }}
+                    </div>
+                    <div class="user-account">
+                        {{ tweet.user.screen_name }}
+                    </div>
+                    <div class="tweet-date">
+                        {{ tweet.created_at | date: "h:mm" }}
+                    </div>
+                </div>
+            </div>
+            <div class="tweet-info">
+                <div class="tweet-text">
+                    <p>{{ tweet.text }}</p>
+                </div>
+                <div class="tweet-img" *ngIf="tweet.entities.media">
+                    <img src="{{ tweet.entities.media[0].media_url }}" />
+                </div>
+            </div>
+            <footer class="interactions">
+                <div>
+                    <i id="like-icon" class="far fa-heart"> {{ tweet.favorite_count }}</i>
+                </div>
+                <div>
+                    <i id="retweet-icon" class="fas fa-retweet">
+            {{ tweet.retweet_count }}</i
+          >
+        </div>
+        <div><i id="comment-icon" class="far fa-comment"></i></div>
+            </footer>
+        </div>
+    </div>
+</ng-template>
